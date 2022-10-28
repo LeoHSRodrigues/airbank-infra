@@ -1,0 +1,41 @@
+version: "3"
+services:
+  airbank-client:
+    container_name: airbank-client
+    build: 
+      context: ./airbank-frontend
+      args:
+        NODE_ENV: production
+        API_BASE_URL: http://localhost:3000
+        GRAPH_API: v1/graphql
+        PORT: 8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - airbank-api
+
+  airbank-database:
+    image: postgres:alpine
+    container_name: airbank-database
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    volumes:
+      - ./airbank-db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: airbank
+
+  airbank-api:
+    container_name: airbank-api
+    build: 
+      context: ./airbank-backend
+      args:
+        PORT: 3000
+        DATABASE_URL: postgresql://root:root@airbank-database:5432/airbank
+    ports:
+      - 3000:3000
+    # restart: on-failure
+    depends_on:
+      - airbank-database

@@ -1,0 +1,6 @@
+[submodule "airbank-frontend"]
+	path = airbank-frontend
+	url = https://github.com/LeoHSRodrigues/airbank-frontend
+[submodule "airbank-backend"]
+	path = airbank-backend
+	url = https://github.com/LeoHSRodrigues/airbank-backend
