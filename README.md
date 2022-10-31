@@ -9,6 +9,7 @@
 This project was built with the following stacks:
 
 ![Nuxtjs](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82) 	
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) 
@@ -93,7 +94,7 @@ npm run cypress
 | Variable                            | Description                | Default value           |
 | ----------------------------------- | -------------------------- | ----------------------- |
 | `GRAPH_API`                         | GraphQL url                | `v1/graphql`            |
-| `PORT`                              | Frontend port              | `3000`                  |
-| `API_BASE_URL`                      |  API port                  | `http://localhost:3000` |
+| `PORT`                              | Frontend port              | `8000`                  |
+| `API_BASE_URL`                      | API port                   | `http://localhost:3000` |
 
 ---
