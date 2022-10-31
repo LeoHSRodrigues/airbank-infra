@@ -36,6 +36,6 @@ services:
         DATABASE_URL: postgresql://root:root@airbank-database:5432/airbank
     ports:
       - 3000:3000
-    # restart: on-failure
+    restart: on-failure
     depends_on:
       - airbank-database
