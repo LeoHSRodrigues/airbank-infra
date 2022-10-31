@@ -61,7 +61,6 @@ To access the app, go to: http://localhost:8000 and you're good to go:
 ```
 docker container exec airbank-api yarn test
 ```
-
 ### Frontend
 
 To test the frontend, you'll have to enter the folder and install the requirements to run cypress on your machine then run from the client folder.
@@ -75,21 +74,21 @@ or
 npm run cypress
 ```
 
-## :motorway: Rotas - Backend
+## :motorway: Routes - Backend
 
 | Route                           | Method | Details                                 |
 | ------------------------------- | ------ | --------------------------------------- |
 | `/api/v1/healthcheck`           | GET    | `App health check route`                |
 | `/api/v1/graphql`               | ANY    | `GraphQL route`                         |
 
-## :floppy_disk: Variáveis de ambiente - Backend
+## :floppy_disk: Environments variables - Backend
 
 | Variable               | Description                          | Default value                                           |
 | ---------------------- | ------------------------------------ | -----------------------------------------------         |
 | `DATABASE_URL`         | Postgres URL                         | `postgresql://root:root@airbank-database:5432/airbank`  |
 | `PORT`                 | Backend port                         | `3000`                                                  |
 
-## :iphone: Variáveis de ambiente - Frontend
+## :iphone: Environments variables - Frontend
 
 | Variable                            | Description                | Default value           |
 | ----------------------------------- | -------------------------- | ----------------------- |
